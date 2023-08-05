@@ -24,6 +24,7 @@ public class MyController {
 	@Autowired
 	private CourseService courseservice;
 	
+	//home
 	@GetMapping("/home")
 	public String home() {
 		return "Welcome";
@@ -35,7 +36,7 @@ public class MyController {
 		return this.courseservice.getCourses();
 	}
 	
-	//get specific course
+	//get specific course from courseid
 	@GetMapping("/courses/{courseId}")
 	public Course getCourse(@PathVariable String courseId) {
 		return this.courseservice.getCourse(Long.parseLong(courseId));

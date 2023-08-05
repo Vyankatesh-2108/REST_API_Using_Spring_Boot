@@ -25,12 +25,15 @@ public class CourseServiceImpl implements CourseService {
 		
 	}
 	
+	//get all courses
 	@Override
 	public List<Course> getCourses() {
 		// TODO Auto-generated method stub
 		return courseDao.findAll();
 	}
+	
 
+	//get specific course
 	@Override
 	public Course getCourse(long courseId) {
 //		Course c = null;
@@ -43,6 +46,7 @@ public class CourseServiceImpl implements CourseService {
 		return courseDao.getOne(courseId);
 	}
 
+	//add course
 	@Override
 	public Course addCourse(Course course) {
 //		list.add(course);
